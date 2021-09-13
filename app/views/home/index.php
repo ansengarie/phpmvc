@@ -4,7 +4,7 @@
       Selamat Datang di Website Saya!
     </h1>
     <p class="lead">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque eaque adipisci, aliquid sed quisquam eveniet voluptate.
+      Halo, nama saya <?= $data['nama']; ?>
     </p>
     <hr class="my-4">
     <p>
