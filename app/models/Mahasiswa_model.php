@@ -2,38 +2,24 @@
 
 class Mahasiswa_model
 {
-  //data dengan array
-  //private $mhs = [
-  // cara manual pake array
-  //   [
-  //     "nama" => "Aji Nuansa Sengarie",
-  //     "nrp" => "193040046",
-  //     "email" => "ansengarie@gmail.com",
-  //     "jurusan" => "Teknik Informatika"
-  //   ],
-  //   [
-  //     "nama" => "Aldi Ageng Tri Seftian",
-  //     "nrp" => "193040054",
-  //     "email" => "ageng@gmail.com",
-  //     "jurusan" => "Teknik Informatika"
-  //   ],
-  //   [
-  //     "nama" => "Rayhan Abduhuda",
-  //     "nrp" => "193040044",
-  //     "email" => "eugbgt@gmail.com",
-  //     "jurusan" => "Teknik Informatika"
-  //   ]
-  // ];
+  private $table = 'mahasiswa';
+  private $db;
 
-
-
-
+  public function __construct()
+  {
+    $this->db = new Database;
+  }
 
   public function getAllMahasiswa()
   {
-    //query
-    $this->stmt = $this->dbh->prepare('SELECT * FROM mahasiswa');
-    $this->stmt->execute();
-    return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    $this->db->query('SELECT * FROM ' . $this->table);
+    return $this->db->resultSet();
+  }
+
+  public function getMahasiswaByID($id)
+  {
+    $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+    $this->db->bind('id', $id);
+    return $this->db->single();
   }
 }
