@@ -2,6 +2,7 @@
 
 class Mahasiswa_model
 {
+  //data dengan array
   //private $mhs = [
   // cara manual pake array
   //   [
@@ -24,22 +25,9 @@ class Mahasiswa_model
   //   ]
   // ];
 
-  private $dbh; //database handler
-  private $stmt; //statement
 
-  //koneksi database PDO
-  public function __construct()
-  {
-    //data source name
-    $dsn = 'mysql:host=localhost;dbname=phpmvc';
 
-    //cek koneksi database
-    try {
-      $this->dbh = new PDO($dsn, 'root', '');
-    } catch (PDOException $e) {
-      die($e->getMessage());
-    }
-  }
+
 
   public function getAllMahasiswa()
   {
