@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://localhost/phpmvc/public');
+define('BASEURL', 'http://localhost/rekweb2021_phpmvc_193040046/public');
 
 // DB
 define('DB_HOST', 'localhost');
