@@ -45,7 +45,7 @@
           </div>
           <div class="form-group mb-3">
             <label for="jurusan">Jurusan</label>
-            <select name="jurusan" id="jurusan" class="form-control">
+            <select name="jurusan" id="jurusan" class="form-select">
               <option value="Teknik Informatika">Teknik Informatika</option>
               <option value="Teknik Mesin">Teknik Mesin</option>
               <option value="Teknik Pangan">Teknik Pangan</option>
