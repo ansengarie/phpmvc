@@ -21,6 +21,9 @@
             <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge bg-danger float-end ms-1 text-decoration-none" onclick="return confirm('apakah anda yakin?');">
               hapus
             </a>
+            <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="ms-1 badge bg-success float-end text-decoration-none" data-bs-toggle="modal" data-bs-target="#formModal">
+              ubah
+            </a>
             <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge bg-primary float-end text-decoration-none">
               detail
             </a>
@@ -51,7 +54,7 @@
           </div>
           <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
           </div>
           <div class="form-group mb-3">
             <label for="jurusan">Jurusan</label>
