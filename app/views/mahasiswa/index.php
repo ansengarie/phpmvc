@@ -9,7 +9,7 @@
   <div class="row">
     <div class="col-lg-6">
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#formModal">
+      <button type="button" class="btn btn-primary mb-3 tombolTambahData" data-bs-toggle="modal" data-bs-target="#formModal">
         Tambah Data Mahasiswa
       </button>
       <h3>Daftar Mahasiswa</h3>
@@ -21,7 +21,7 @@
             <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge bg-danger float-end ms-1 text-decoration-none" onclick="return confirm('apakah anda yakin?');">
               hapus
             </a>
-            <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="ms-1 badge bg-success float-end text-decoration-none" data-bs-toggle="modal" data-bs-target="#formModal">
+            <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="tampilUbah ms-1 badge bg-success float-end text-decoration-none" data-bs-toggle="modal" data-bs-target="#formModal" data-id="<?= $mhs['id']; ?>">
               ubah
             </a>
             <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge bg-primary float-end text-decoration-none">
@@ -44,6 +44,7 @@
       </div>
       <div class="modal-body">
         <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+          <input type="hidden" name="id" id="id">
           <div class="form-group mb-3">
             <label for="nama" class="form-label">Nama</label>
             <input type="text" class="form-control" id="nama" name="nama">
